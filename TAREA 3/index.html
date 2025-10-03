@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Sistema de Gestión de Clientes</h1>
+      <p>Ingrese los datos de sus clientes</p>
+    </header>
+
+    <main class="main-content">
+      <!-- Formulario -->
+      <section class="form-section">
+        <h3>Registro de Cliente</h3>
+        <div class="success-message" id="successMessage">✅ Cliente registrado exitosamente</div>
+
+        <form id="clientForm">
+          <label>Nombre *</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label>Cédula *</label>
+          <input type="text" id="cedula" name="cedula" required>
+
+          <label>Teléfono *</label>
+          <input type="tel" id="telefono" name="telefono" required>
+
+          <label>Email *</label>
+          <input type="email" id="email" name="email" required>
+
+          <label>Dirección *</label>
+          <input type="text" id="direccion" name="direccion" required>
+
+          <label>Ciudad *</label>
+          <input type="text" id="ciudad" name="ciudad" required>
+
+          <label>País *</label>
+          <select id="pais" name="pais" required>
+            <option value="">Seleccione</option>
+            <option>Ecuador</option><option>Colombia</option><option>Perú</option>
+            <option>Venezuela</option><option>Brasil</option><option>Argentina</option>
+          </select>
+
+          <label>Fecha de Nacimiento</label>
+          <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+
+          <label>Género</label>
+          <select id="genero" name="genero">
+            <option value="">Seleccione</option>
+            <option>Masculino</option><option>Femenino</option><option>Otro</option>
+          </select>
+
+          <label>Observaciones</label>
+          <textarea id="observaciones" name="observaciones"></textarea>
+
+          <div class="btn-container">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="button" class="btn btn-secondary" onclick="limpiarFormulario()">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Clientes -->
+      <section class="clients-section">
+        <h3>Clientes Registrados</h3>
+        <div class="stats">
+          <div><h4 id="totalClientes">0</h4><p>Total</p></div>
+          <div><h4 id="clientesHoy">0</h4><p>Hoy</p></div>
+        </div>
+        <div id="clientesList" class="client-list">
+          <p>🎯 ¡Comienza a registrar!</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

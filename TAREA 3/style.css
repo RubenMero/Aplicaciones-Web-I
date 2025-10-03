@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  margin: 0; padding: 20px;
+}
+.container {
+  max-width: 900px; margin: auto; background: #fff;
+  border-radius: 10px; overflow: hidden;
+}
+.header { text-align: center; color: #fff; background: #3498db; padding: 20px; }
+.main-content { display: grid; gap: 20px; padding: 20px; grid-template-columns: 1fr 1fr; }
+form label { display: block; margin-top: 10px; font-weight: bold; }
+form input, form select, form textarea {
+  width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;
+}
+.btn-container { margin-top: 15px; display: flex; gap: 10px; }
+.btn { flex: 1; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+.btn-primary { background: #3498db; color: #fff; }
+.btn-secondary { background: #7f8c8d; color: #fff; }
+.success-message { display: none; background: #d4edda; padding: 10px; border-radius: 5px; margin: 10px 0; }
+.clients-section { background: #f8f9fa; padding: 15px; border-radius: 8px; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 10px; }
+.client-list .client-card {
+  background: #fff; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px;
+}
+@media(max-width:768px){ .main-content{grid-template-columns:1fr;} }
